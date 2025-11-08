@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   server: {
-    allowedHost: "smart-parking-system-a74q.onrender.com",
+    allowedHosts: ["smart-parking-system-a74q.onrender.com"], // ✅ fixed
     port: 8080,
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
